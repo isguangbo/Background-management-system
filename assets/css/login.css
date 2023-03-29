@@ -1,0 +1,46 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: url(../images/login_bg.jpg) no-repeat center / cover;
+}
+.logo {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.loginAndReg {
+  width: 400px;
+  background-color: #fff;
+  /* 居中显示 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loginAndReg .title {
+  height: 60px;
+  background: url(../images/login_title.png) no-repeat center;
+}
+.loginAndReg .register {
+  display: none;
+}
+.loginAndReg .layui-form {
+  position: relative;
+  padding: 0 30px;
+}
+.loginAndReg .layui-form .links {
+  display: flex;
+  justify-content: end;
+}
+.loginAndReg .layui-form .links a {
+  font-size: 12px;
+}
+.loginAndReg .layui-form .layui-icon {
+  position: absolute;
+}
+.loginAndReg .layui-form .layui-input {
+  padding-left: 38px;
+}

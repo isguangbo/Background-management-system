@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>test</title>
+		<script src="assets/lib/jquery-3.6.3.min.js"></script>
+	</head>
+	<body>
+		<form action="" id="form">
+			<input type="text" name="username" />
+			<input type="text" name="password" />
+			<button type="submit">提交</button>
+		</form>
+		<script>
+			$(function () {
+				$("#form").submit(function (e) {
+					e.preventDefault();
+					console.log($(this).serialize());
+				});
+				function serializeArrayToObj() {
+					// 1.使用 serializeArray() 方法将其转换为对象数组，然后使用以下方法将其转换为对象
+					const data = [
+						{ name: "username", value: "212" },
+						// { name: "password", value: "1212" },
+					];
+					data1 = {};
+					data.forEach(function (params) {
+						data1[params.name] = params.value;
+						// { name: 'username', value: '212'}
+						// { name: "password", value: "1212"}
+					});
+					console.log(data1);
+				}
+				// serializeArrayToObj();
+				// $.each({ name: "ss", age: 18 }, function (i, ele) {
+				// 	// i是属性名
+				// 	console.log(i);
+				// 	// ele属性值
+				// 	console.log(ele);
+				// });
+				function serializeToObj() {
+					// 2.手动解析序列化表单数据字符串并将其转换为对象
+					const serializedData = "name=John&email=john@example.com&phone=1234567890";
+
+					const formData = {};
+					serializedData.split("&").forEach(function (input) {
+						const pair = input.split("=");
+						formData[pair[0]] = decodeURIComponent(pair[1] || "");
+					});
+
+					console.log(formData); // 将表单数据转换为对象
+				}
+
+				function serializedDataToObj() {
+					var serializedData = "name=John&age=30&email=john@example.com";
+					// 使用decodeURIComponent()方法对序列化的数据进行解码后使用split()方法将其拆分成一个字符串数组
+					var formDataArray = decodeURIComponent(serializedData).split("&");
+					// 我们创建一个空对象
+					var formDataObj = {};
+					// 使用for循环遍历数组中的每个元素
+					for (var i = 0; i < formDataArray.length; i++) {
+						// 将每个元素拆分成键值对
+						var nameValue = formDataArray[i].split("=");
+						// 添加到formDataObj对象中
+						formDataObj[nameValue[0]] = nameValue[1];
+					}
+
+					// console.log(formDataObj);
+					// Output: {name: "John", age: "30", email: "john@example.com"}
+				}
+			});
+		</script>
+	</body>
+</html>

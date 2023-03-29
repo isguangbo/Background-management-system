@@ -1,0 +1,47 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	background: url(../images/login_bg.jpg) no-repeat center / cover;
+}
+.logo {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+}
+.loginAndReg {
+	width: 400px;
+	// height: 310px;
+	background-color: #fff;
+	/* 居中显示 */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	.title {
+		height: 60px;
+		background: url(../images/login_title.png) no-repeat center;
+	}
+	.register {
+		display: none;
+	}
+	.layui-form {
+		position: relative;
+		padding: 0 30px;
+		.links {
+			display: flex;
+			justify-content: end;
+			a {
+				font-size: 12px;
+			}
+		}
+		.layui-icon {
+			position: absolute;
+		}
+		.layui-input {
+			padding-left: 38px;
+		}
+	}
+}
