@@ -16,7 +16,7 @@
 	<body>
 		<div class="layui-layout layui-layout-admin">
 			<div class="layui-header">
-				<div class="layui-logo layui-hide-xs layui-bg-black">
+				<div class="layui-logo layui-hide-xs layui-bg-black userinfo">
 					<img src="assets/images/favicon.ico" alt="" class="layui-nav-img" />
 					<span class="text-avatar"></span>
 					<span class="welcome"></span>
@@ -24,16 +24,16 @@
 				<!-- 头部区域（可配合layi 已有的水平导航） -->
 
 				<ul class="layui-nav layui-layout-right">
-					<li class="layui-nav-item layui-hide layui-show-md-inline-block" showLine="false">
+					<li class="layui-nav-item layui-hide layui-show-md-inline-block">
 						<a href="javascript:;" class="userinfo">
 							<img src="assets/images/avatar.jpg" class="layui-nav-img" id="user_pic" />
 							<span class="text-avatar"></span>
 							个人中心
 						</a>
 						<dl class="layui-nav-child">
-							<dd><a href="">基本资料</a></dd>
-							<dd><a href="">更换头像</a></dd>
-							<dd><a href="">重置密码</a></dd>
+							<dd><a href="user/userinfo.html" target="fm">基本资料</a></dd>
+							<dd><a href="user/avatar.html" target="fm">更换头像</a></dd>
+							<dd><a href="user/resetpassword.html" target="fm">重置密码</a></dd>
 						</dl>
 					</li>
 					<li class="layui-nav-item layui-hide layui-show-md-inline-block exit">
@@ -77,17 +77,19 @@
 							<a href="javascript:;"><i class="layui-icon layui-icon-user icofont"></i>个人中心</a>
 							<dl class="layui-nav-child">
 								<dd>
-									<a href="javascript:;"
+									<a href="user/userinfo.html" target="fm"
 										><i class="layui-icon layui-icon-tabs icofont"></i>基本资料</a
 									>
 								</dd>
 								<dd>
-									<a href="javascript:;"
-										><i class="layui-icon layui-icon-picture icofont"></i>更换头像</a
+									<a href="user/avatar.html" target="fm"
+										><i class="layui-icon layui-icon-set icofont"></i>更换头像</a
 									>
 								</dd>
 								<dd>
-									<a href="javascript:;"><i class="layui-icon layui-icon-set icofont"></i>重置密码</a>
+									<a href="user/resetpassword.html" target="fm"
+										><i class="layui-icon layui-icon-set icofont"></i>重置密码</a
+									>
 								</dd>
 							</dl>
 						</li>
