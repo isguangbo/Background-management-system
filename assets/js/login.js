@@ -106,9 +106,9 @@ $(function () {
 					function () {
 						// 将登陆成功得到的token字符串保存到localStorage中
 						localStorage.setItem("token", response.token);
+						console.log(response.token);
 						// 相对于html文件
 						location.href = "index.html";
-						// Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzkyOCwidXNlcm5hbWUiOiJzczExMSIsInBhc3N3b3JkIjoiIiwibmlja25hbWUiOiIiLCJlbWFpbCI6IiIsInVzZXJfcGljIjoiIiwiaWF0IjoxNjgwMDc2MDUzLCJleHAiOjE2ODAxMTIwNTN9.UGZPv2ltQ6S8g6YapOGKMj5dxu27iAOgTJ_Ud_YU_wQ
 					}
 				);
 			},
